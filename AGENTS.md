@@ -9,7 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 Personal website for Salman Shaheen. Next.js (App Router) + TypeScript + Tailwind CSS v4, built with Turbopack, deployed on Vercel.
 
 - **Hosting / deploys:** Vercel, Git-connected. `main` = production; every other branch/PR = its own preview URL. (Migrated off GitHub Pages.)
-- **Domain:** `www.s0shaheen.com` (canonical) + apex `s0shaheen.com`. DNS managed at Namecheap (BasicDNS).
+- **Domain:** `s0shaheen.com` (canonical, apex) — `www.s0shaheen.com` redirects to it. DNS at Namecheap (BasicDNS).
 - **Commands:** `pnpm dev` (Turbopack), `pnpm build`, `pnpm start`, `pnpm lint`.
 - **Node:** 22+ — `.nvmrc` = `22`, `engines.node` = `>=22` (local dev on 24 is fine; Vercel builds on 22.x).
 - **Content / blog:** Substack-first — no CMS / MDX / DB / auth yet. An on-site `/blog` route may come later.

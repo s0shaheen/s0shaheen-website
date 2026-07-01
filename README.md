@@ -17,7 +17,7 @@ Node is pinned to **22** via `.nvmrc` / `engines.node`.
 
 Hosted on Vercel with Git-connected auto-deploys:
 
-- Push to `main` → **production** (`www.s0shaheen.com`).
+- Push to `main` → **production** (`s0shaheen.com`).
 - Every other branch / PR → its own **preview** URL.
 
 DNS is managed at Namecheap (BasicDNS); the domain was migrated here from GitHub Pages.
