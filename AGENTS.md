@@ -12,9 +12,10 @@ Personal website for Salman Shaheen. Next.js (App Router) + TypeScript + Tailwin
 - **Domain:** `s0shaheen.com` (canonical, apex) — `www.s0shaheen.com` redirects to it. DNS at Namecheap (BasicDNS).
 - **DNS method:** A/CNAME records at Namecheap (nameservers stay at Namecheap). Apex `A @ → 216.198.79.1`; `www CNAME → cname.vercel-dns.com`. ⚠️ **Do NOT switch to Vercel nameservers** — the domain runs Google Workspace email (`MX → smtp.google.com`) in Namecheap DNS, which would break.
 - **Commands:** `pnpm dev` (Turbopack), `pnpm build`, `pnpm start`, `pnpm lint`.
-- **Node:** 22+ — `.nvmrc` = `22`, `engines.node` = `>=22` (local dev on 24 is fine; Vercel builds on 22.x).
+- **Node:** 22+ — `.nvmrc` = `22`, `engines.node` = `>=22`. Vercel resolves the range to **24.x** (matches local Node 24).
 - **Content / blog:** Substack-first — no CMS / MDX / DB / auth yet. An on-site `/blog` route may come later.
 - **Secrets:** live in Vercel env vars; pull locally with `vercel env pull`. Never commit `.env*` (gitignored).
+- **Analytics:** `@vercel/analytics` + `@vercel/speed-insights` are wired in `layout.tsx`; they stay inert until Web Analytics / Speed Insights are enabled in the Vercel dashboard.
 
 ### Roadmap (post-setup — not yet built)
 1. Requirements for the `work`, `personal`, and `writing` sections (page by page).
