@@ -18,7 +18,7 @@ function ItemGroup({ label, items }: { label: string; items: Item[] }) {
     <div>
       <SectionLabel>{label}</SectionLabel>
       {cards.length > 0 && (
-        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {cards.map((i) => (
             <ItemCard key={i.slug} item={i} />
           ))}

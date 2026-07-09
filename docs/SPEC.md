@@ -45,7 +45,7 @@ One personal site that reads two ways at once: **financial-services professional
 
 | # | Decision | Resolution |
 |---|---|---|
-| D3 | Page shell | **Responsive:** wider (~960px) organization on desktop, collapsing to a narrow single column on mobile. Section layouts adapt (e.g., card rows 4-up → 2-up, two-column lists → stacked). |
+| D3 | Page shell | **Narrow single column (~680px) at every size** (revised 2026-07-09 — Salman reverted the wide-desktop arrangement). Cards 3-up desktop, 2-up mobile. |
 | D4 | Experiences organization | **B — Currently / Previously** (chronological aliveness). Projects section keeps thematic buckets. |
 | D5 | Logo treatment | **b — greyscale, color restores on hover** (the one sanctioned color moment). |
 | D6 | Popup engine | **A + B + C combined:** URL-addressable popups via Next.js intercepting/parallel routes (shareable, Back-button closes, SSR-indexable), presented as a centered dialog on desktop and a bottom sheet on mobile. The added routing complexity is accepted. |

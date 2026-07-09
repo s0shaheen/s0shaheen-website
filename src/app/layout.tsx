@@ -59,7 +59,7 @@ export default function RootLayout({
       className={`${literata.variable} ${hanken.variable} ${splineMono.variable}`}
     >
       <body className="min-h-dvh flex flex-col">
-        <header className="mx-auto w-full max-w-[960px] px-6 pt-10 sm:pt-14">
+        <header className="mx-auto w-full max-w-[680px] px-6 pt-10 sm:pt-14">
           <Link
             href="/"
             className="inline-flex items-baseline gap-2 font-serif text-lg font-semibold tracking-tight"
@@ -69,11 +69,11 @@ export default function RootLayout({
           </Link>
         </header>
 
-        <main className="mx-auto w-full max-w-[960px] flex-1 px-6">
+        <main className="mx-auto w-full max-w-[680px] flex-1 px-6">
           {children}
         </main>
 
-        <footer className="mx-auto w-full max-w-[960px] px-6 pb-12 pt-20">
+        <footer className="mx-auto w-full max-w-[680px] px-6 pb-12 pt-20">
           <div className="border-t border-hair pt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
             {site.handles.map((h) => (
               <a
