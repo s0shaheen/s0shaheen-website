@@ -1,0 +1,125 @@
+# Pages CMS configuration (https://pagescms.org/docs/configuration/)
+# Connect at https://app.pagescms.org with GitHub → this repo, and these
+# content files become phone-editable forms. Same YAML the build validates.
+
+media:
+  input: public/media
+  output: /media
+
+content:
+  - name: site
+    label: Site
+    type: file
+    path: content/site.yml
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: location, label: Location, type: string }
+      - { name: currently, label: "Currently line (empty hides it)", type: string }
+      - { name: interests, label: "Off hours / what I care about", type: text }
+      - { name: substackFeed, label: "Substack feed URL (empty hides posts)", type: string }
+      - name: handles
+        label: Handles
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: href, label: URL, type: string }
+      - name: reachOutIf
+        label: "Reach out if you're…"
+        type: string
+        list: true
+
+  - name: experiences
+    label: Experiences
+    type: file
+    path: content/experiences.yml
+    list: true
+    fields:
+      - { name: slug, label: Slug (kebab-case), type: string }
+      - { name: title, label: Title, type: string }
+      - { name: org, label: Organization, type: string }
+      - { name: years, label: Years, type: string }
+      - { name: status, label: Status, type: select, options: { values: [current, previous] } }
+      - { name: featured, label: Featured card, type: boolean }
+      - name: graphic
+        label: Card graphic
+        type: object
+        fields:
+          - { name: kind, label: Kind, type: select, options: { values: [icon, logo, image] } }
+          - { name: value, label: "Icon name or image path", type: string }
+          - { name: wide, label: Wide card, type: boolean }
+      - name: popup
+        label: Popup
+        type: object
+        fields:
+          - { name: body, label: Talking points, type: string, list: true }
+          - { name: skills, label: Skills, type: string, list: true }
+          - name: links
+            label: Links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: URL, type: string }
+
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.yml
+    list: true
+    fields:
+      - { name: slug, label: Slug (kebab-case), type: string }
+      - { name: title, label: Title, type: string }
+      - { name: bucket, label: Bucket, type: string }
+      - { name: oneLiner, label: One-liner, type: string }
+      - { name: years, label: Years, type: string }
+      - { name: featured, label: Featured card, type: boolean }
+      - name: graphic
+        label: Card graphic
+        type: object
+        fields:
+          - { name: kind, label: Kind, type: select, options: { values: [icon, logo, image] } }
+          - { name: value, label: "Icon name or image path", type: string }
+          - { name: wide, label: Wide card, type: boolean }
+      - name: popup
+        label: Popup
+        type: object
+        fields:
+          - { name: body, label: Talking points, type: string, list: true }
+          - { name: skills, label: Skills, type: string, list: true }
+          - name: links
+            label: Links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: URL, type: string }
+
+  - name: fun
+    label: Fun page
+    type: file
+    path: content/fun.yml
+    fields:
+      - name: shelves
+        label: Shelves
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Shelf title, type: string }
+          - name: items
+            label: Items
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: take, label: One-line take, type: string }
+              - { name: href, label: Link, type: string }
+      - name: freeform
+        label: Freeform board
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Image, type: image }
+          - { name: caption, label: Caption, type: string }

@@ -1,0 +1,16 @@
+# The /fun page: structured shelves for lists + a freeform zone for anything.
+#
+# shelves — titled lists (movies, books, tools, whatever):
+#   - title: Movies I love
+#     items:
+#       - title: Into the Spider-Verse
+#         take: how it's drawn          # optional one-liner, handwritten-style
+#         href: https://...             # optional link
+#
+# freeform — schema-light drop zone; each item needs only ONE of text/image:
+#   - text: a thought, a quote, anything
+#   - image: /media/photo.jpg           # put files in public/media/
+#     caption: optional caption
+
+shelves: []
+freeform: []

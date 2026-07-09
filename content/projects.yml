@@ -1,0 +1,15 @@
+# Projects — grouped by bucket on the home page. Same item shape as experiences
+# (minus `status`, plus `bucket`). The section stays hidden while this is empty.
+#
+# - slug: my-project
+#   title: My Project
+#   bucket: Side projects        # buckets are free-form; items group by this label
+#   oneLiner: One honest line about it.
+#   featured: true
+#   graphic: { kind: icon, value: Rocket, wide: false }
+#   popup:
+#     body: [...]
+#     skills: [...]
+#     links: [...]
+
+[]

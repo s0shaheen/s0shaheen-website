@@ -1,0 +1,27 @@
+# Site-wide identity + contact. Edit freely — the build validates every field.
+name: Salman Shaheen
+tagline: Product manager building platforms that move money and solve problems.
+location: Chicago, IL
+
+# One living present-tense line under the name. Leave "" to hide.
+currently: Product Manager, Platform at Capital One
+
+# "What I care about" prose. Plain text/markdown-ish; leave "" to hide the section.
+interests: >-
+  When I'm not building products, I'm reading Marvel comics, perfecting my
+  AeroPress recipe, or tinkering with side projects & AI.
+
+# Substack publication RSS feed URL (e.g. https://NAME.substack.com/feed).
+# Leave "" until the publication exists — /writing shows a quiet empty state.
+substackFeed: ""
+
+handles:
+  - label: Email
+    href: mailto:shaheensalmant@gmail.com
+  - label: LinkedIn
+    href: https://linkedin.com/in/s0shaheen
+  - label: GitHub
+    href: https://github.com/s0shaheen
+
+# Contact section: "Reach out if you're…" personas. Empty until the copy workshop.
+reachOutIf: []

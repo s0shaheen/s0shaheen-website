@@ -1,130 +1,106 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*
+ * Design tokens — locked in docs/SPEC.md (v1.0).
+ * Monochrome: color enters only via photos/graphics; logos grey, color on hover.
+ */
+:root {
+  --ink: #141412;
+  --soft: #3d3c39;
+  --muted: #6d6b66;
+  --faint: #9b9891;
+  --hair: rgba(20, 20, 18, 0.14);
+  --hair-soft: rgba(20, 20, 18, 0.08);
+  --bg: #ffffff;
+  --wash: #f7f6f3;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 180ms;
 }
 
-:root {
-  --bg: #fafaf8;
-  --text: #1a1a1a;
-  --text-light: #5a5a5a;
-  --border: #e0e0e0;
-  --accent: #2b2b2b;
+@theme inline {
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-hair: var(--hair);
+  --color-hair-soft: var(--hair-soft);
+  --color-bg: var(--bg);
+  --color-wash: var(--wash);
+  --font-serif: var(--font-literata), Georgia, serif;
+  --font-sans: var(--font-hanken), -apple-system, system-ui, sans-serif;
+  --font-mono: var(--font-spline-mono), ui-monospace, monospace;
 }
 
 body {
-  font-family: var(--font-work-sans), -apple-system, sans-serif;
   background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  color: var(--ink);
+  font-family: var(--font-hanken), -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-.container {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 80px 24px 120px;
+::selection {
+  background: var(--ink);
+  color: var(--bg);
 }
 
-h1 {
-  font-family: var(--font-crimson-pro), serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  margin-bottom: 8px;
+/* Motion kit: one easing, one duration, all gated behind reduced-motion. */
+.fade-up {
   opacity: 0;
-  animation: fadeIn 0.6s ease forwards;
+  transform: translateY(6px);
+  animation: fade-up 0.55s var(--ease) forwards;
+}
+.fade-up:nth-child(2) { animation-delay: 0.1s; }
+.fade-up:nth-child(3) { animation-delay: 0.2s; }
+.fade-up:nth-child(4) { animation-delay: 0.3s; }
+.fade-up:nth-child(5) { animation-delay: 0.4s; }
+.fade-up:nth-child(6) { animation-delay: 0.5s; }
+@keyframes fade-up {
+  to { opacity: 1; transform: none; }
 }
 
-.tagline {
-  font-size: 1.05rem;
-  color: var(--text-light);
-  margin-bottom: 64px;
-  opacity: 0;
-  animation: fadeIn 0.6s ease 0.2s forwards;
+/* Links: underline grows in from the left. */
+.link-grow {
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) no-repeat left 100% / 0% 1px;
+  transition: background-size var(--dur) var(--ease);
+  padding-bottom: 1px;
+}
+.link-grow:hover,
+.link-grow:focus-visible {
+  background-size: 100% 1px;
 }
 
-section {
-  margin-bottom: 56px;
-  opacity: 0;
-  animation: fadeIn 0.6s ease forwards;
+/* Company logos: greyscale until hover restores color (the one sanctioned color moment). */
+.logo-grey {
+  filter: grayscale(1) opacity(0.55) contrast(1.05);
+  transition: filter var(--dur) var(--ease);
+}
+.logo-grey:hover,
+a:hover > .logo-grey,
+a:focus-visible > .logo-grey {
+  filter: none;
 }
 
-section:nth-child(2) { animation-delay: 0.3s; }
-section:nth-child(3) { animation-delay: 0.4s; }
-section:nth-child(4) { animation-delay: 0.5s; }
-section:nth-child(5) { animation-delay: 0.6s; }
-section:nth-child(6) { animation-delay: 0.7s; }
-
-h2 {
-  font-family: var(--font-crimson-pro), serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
+@keyframes modal-pop {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.97); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
-.experience-item {
-  margin-bottom: 20px;
-  padding-left: 20px;
-  border-left: 1px solid var(--border);
-}
-
-.experience-item:last-child {
-  margin-bottom: 0;
-}
-
-.role {
-  font-size: 1rem;
-  color: var(--text);
-  margin-bottom: 2px;
-}
-
-.company {
-  font-size: 0.95rem;
-  color: var(--text-light);
-}
-
-.education-item {
-  padding-left: 20px;
-  border-left: 1px solid var(--border);
-}
-
-.degree {
-  font-size: 1rem;
-  color: var(--text);
-  margin-bottom: 2px;
-}
-
-.school {
-  font-size: 0.95rem;
-  color: var(--text-light);
-}
-
-.interests {
-  font-size: 1.05rem;
-  color: var(--text);
-  line-height: 1.7;
-}
-
-@keyframes fadeIn {
-  to {
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
     opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 
-@media (max-width: 640px) {
-  .container {
-    padding: 60px 20px 100px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }

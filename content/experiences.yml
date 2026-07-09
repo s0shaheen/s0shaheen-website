@@ -1,0 +1,49 @@
+# Experiences — rendered as Currently / Previously lists on the home page.
+#
+# Each item:
+#   slug      unique id; becomes the popup URL (/work/<slug>) when a popup exists
+#   title     role
+#   org       organization
+#   years     optional, e.g. "2023–now" (omit if unsure — never guess)
+#   status    current | previous
+#   featured  true → renders as a card above the list (needs `graphic`)
+#   graphic   { kind: icon | logo | image, value: <gravity-ui icon name | /path>, wide: true? }
+#   popup     presence makes the item clickable:
+#     body:   [2–4 talking points — scope line, impact line, decision line]
+#     skills: [3–6 specific tags]
+#     links:  [{ label, href }]
+#
+# Example popup (uncomment and edit to make an item clickable):
+#   popup:
+#     body:
+#       - Own a platform surface used by multiple internal teams.
+#       - Cut partner-team integration time by double digits.
+#     skills: [Platform strategy, API design, SQL]
+#     links:
+#       - label: LinkedIn
+#         href: https://linkedin.com/in/s0shaheen
+
+- slug: capital-one-platform
+  title: Product Manager, Platform
+  org: Capital One
+  status: current
+
+- slug: capital-one-mobile
+  title: Product Manager, Mobile
+  org: Capital One
+  status: previous
+
+- slug: swe-internships
+  title: Software Engineer Intern
+  org: AbbVie, StoneX, State Farm
+  status: previous
+
+- slug: otcr
+  title: Executive Partner
+  org: OTCR Consulting
+  status: previous
+
+- slug: uiuc
+  title: B.S. Computer Science & Economics · Senior 100
+  org: University of Illinois Urbana-Champaign
+  status: previous
