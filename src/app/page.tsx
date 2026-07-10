@@ -46,7 +46,7 @@ export default function Home() {
     <div className="pt-16 sm:pt-24">
       {/* About */}
       <section className="fade-up flex items-center gap-5 sm:gap-0">
-        <div className="min-w-0 flex-1 sm:pr-8">
+        <div className="min-w-0 flex-1 sm:max-w-96 sm:flex-none">
           <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
             {site.name}
           </h1>
@@ -59,16 +59,17 @@ export default function Home() {
           )}
         </div>
         {site.portrait && (
-          <Image
-            src={site.portrait}
-            alt="Ink-sketch portrait of Salman"
-            width={480}
-            height={459}
-            priority
-            className="h-auto w-[156px] shrink-0 sm:w-[208px]"
-          />
+          <div className="shrink-0 sm:flex sm:flex-1 sm:justify-center">
+            <Image
+              src={site.portrait}
+              alt="Ink-sketch portrait of Salman"
+              width={480}
+              height={459}
+              priority
+              className="h-auto w-[156px] sm:w-[208px]"
+            />
+          </div>
         )}
-        <div aria-hidden className="hidden shrink-0 sm:block sm:w-[calc(50%-104px)]" />
       </section>
 
       {/* Experience */}
