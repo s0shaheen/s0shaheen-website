@@ -4,7 +4,7 @@ import { getExperiences, getProjects, getSite, type Item } from "@/lib/content";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-muted">
+    <h2 className="font-medium text-[0.66rem] uppercase tracking-[0.14em] text-muted">
       {children}
     </h2>
   );
@@ -50,7 +50,7 @@ export default function Home() {
         </h1>
         <p className="mt-3 text-lg text-soft">{site.tagline}</p>
         {site.currently && (
-          <p className="mt-5 flex items-baseline gap-2 font-mono text-[0.7rem] uppercase tracking-[0.08em] text-muted">
+          <p className="mt-5 flex items-baseline gap-2 font-medium text-[0.7rem] uppercase tracking-[0.08em] text-muted">
             <Mark size={9} className="shrink-0 translate-y-px" />
             currently: {site.currently} · {site.location}
           </p>

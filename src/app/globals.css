@@ -28,7 +28,6 @@
   --color-wash: var(--wash);
   --font-serif: var(--font-literata), Georgia, serif;
   --font-sans: var(--font-hanken), -apple-system, system-ui, sans-serif;
-  --font-mono: var(--font-spline-mono), ui-monospace, monospace;
 }
 
 body {

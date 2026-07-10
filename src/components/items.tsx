@@ -87,7 +87,7 @@ export function ItemRow({ item }: { item: Item }) {
       </span>
       <span className="flex shrink-0 items-baseline gap-2">
         {item.years && (
-          <span className="font-mono text-[0.68rem] uppercase tracking-wide text-muted">
+          <span className="font-medium text-[0.68rem] uppercase tracking-wide text-muted">
             {item.years}
           </span>
         )}
@@ -123,7 +123,7 @@ export function ItemDetail({ item }: { item: Item }) {
   return (
     <article>
       <h1 className="font-serif text-xl font-semibold">{item.title}</h1>
-      <p className="mt-1 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-muted">
+      <p className="mt-1 font-medium text-[0.66rem] uppercase tracking-[0.1em] text-muted">
         {[item.org, item.years].filter(Boolean).join(" · ")}
       </p>
       <ul className="mt-4 list-disc space-y-1.5 pl-5 text-[0.95rem] leading-relaxed">
@@ -136,7 +136,7 @@ export function ItemDetail({ item }: { item: Item }) {
           {item.popup.skills.map((s) => (
             <li
               key={s}
-              className="rounded-full border border-hair px-2.5 py-0.5 font-mono text-[0.64rem] text-soft"
+              className="rounded-full border border-hair px-2.5 py-0.5 font-medium text-[0.64rem] text-soft"
             >
               {s}
             </li>

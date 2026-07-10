@@ -23,7 +23,7 @@ export default function FunPage() {
 
       {fun.shelves.map((shelf) => (
         <section key={shelf.title} className="mt-10 max-w-[62ch]">
-          <h2 className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-muted">
+          <h2 className="font-medium text-[0.66rem] uppercase tracking-[0.14em] text-muted">
             {shelf.title}
           </h2>
           <div className="mt-2">

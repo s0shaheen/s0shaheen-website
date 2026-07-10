@@ -16,7 +16,7 @@ Personal website for Salman Shaheen. Next.js 16 (App Router) + TypeScript + Tail
 - **Analytics:** @vercel/analytics + speed-insights in `layout.tsx` (their scripts 404 in local dev — normal).
 
 ### Design system (locked — see docs/SPEC.md v1.0)
-- **Type:** Literata (serif, headings) · Hanken Grotesk (sans, body) · Spline Sans Mono (metadata: labels, years, tags — uppercase, tracked). Self-hosted via `next/font`.
+- **Type:** Literata (serif, headings) · Hanken Grotesk (sans, body). Metadata (labels, years, tags) = **letterspaced Hanken caps** (medium weight, uppercase, ~+0.1em tracking) — deliberately NOT a mono; Salman rejected mono metadata as template-coded. Two families total, self-hosted via `next/font`.
 - ⛔ **NEVER use Geist Mono or Geist Sans. Anywhere. Ever.** (Owner's explicit permanent rule.) Avoid template-rinsed faces generally (Inter-as-display, Space Grotesk, etc.).
 - **Icons:** Gravity UI (`@gravity-ui/icons`, per-icon imports). One set only — never mix packs.
 - **Mark:** the heavy asterisk ✱ (`src/components/mark.tsx`; `variant="light"` = thin ∗ for small/secondary uses). It is the favicon, wordmark bullet, and section punctuation.

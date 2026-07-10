@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Literata, Hanken_Grotesk, Spline_Sans_Mono } from "next/font/google";
+import { Literata, Hanken_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Mark } from "@/components/mark";
@@ -15,11 +15,6 @@ const literata = Literata({
 
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
-  subsets: ["latin"],
-});
-
-const splineMono = Spline_Sans_Mono({
-  variable: "--font-spline-mono",
   subsets: ["latin"],
 });
 
@@ -56,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${literata.variable} ${hanken.variable} ${splineMono.variable}`}
+      className={`${literata.variable} ${hanken.variable}`}
     >
       <body className="min-h-dvh flex flex-col">
         <header className="mx-auto w-full max-w-[680px] px-6 pt-10 sm:pt-14">
@@ -87,7 +82,7 @@ export default function RootLayout({
                 {h.label}
               </a>
             ))}
-            <span className="ml-auto inline-flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-faint">
+            <span className="ml-auto inline-flex items-center gap-2 font-medium text-[0.65rem] uppercase tracking-[0.12em] text-faint">
               <Mark size={9} variant="light" />
               {new Date().getFullYear()}
             </span>

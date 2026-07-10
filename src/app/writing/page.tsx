@@ -80,7 +80,7 @@ export default async function WritingPage() {
                 </span>
               </span>
               {p.date && (
-                <span className="mt-0.5 block font-mono text-[0.66rem] uppercase tracking-[0.08em] text-muted">
+                <span className="mt-0.5 block font-medium text-[0.66rem] uppercase tracking-[0.08em] text-muted">
                   {p.date} · on Substack
                 </span>
               )}

@@ -6,7 +6,7 @@
 
 | # | Decision | Resolution |
 |---|---|---|
-| D1 | Type system | **E — Literata (headings) + Hanken Grotesk (body) + Spline Sans Mono (metadata)** |
+| D1 | Type system | **E revised — Literata (headings) + Hanken Grotesk (body); metadata = letterspaced Hanken caps** (Spline Sans Mono dropped 2026-07-09 — mono metadata read "vibe-coded" to Salman; no third face) |
 | D2 | Icon set | **Gravity UI** (`@gravity-ui/icons`, MIT) |
 | D11 | Signature mark | **✱ heavy asterisk everywhere; ∗ thin/math asterisk as the light variant** (SVG in `src/components/mark.tsx`; also the favicon) |
 | D6b | Card system | **Approved:** square + wide (2-col span), identical border/radius/hover/↗/caption |
