@@ -50,7 +50,9 @@ export default function Home() {
           <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
             {site.name}
           </h1>
-          <p className="mt-3 text-lg text-soft">{site.tagline}</p>
+          {site.tagline && (
+            <p className="mt-3 text-lg text-soft">{site.tagline}</p>
+          )}
           {site.currently && (
             <p className="mt-5 flex items-baseline gap-2 font-medium text-[0.7rem] uppercase tracking-[0.08em] text-muted">
               <Mark size={9} className="shrink-0 translate-y-px" />

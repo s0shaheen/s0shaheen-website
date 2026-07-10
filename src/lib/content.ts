@@ -56,7 +56,7 @@ const projectSchema = z.object({
 // it writes YAML, and a CMS round-trip must never break the build.
 const siteSchema = z.object({
   name: z.string(),
-  tagline: z.string(),
+  tagline: z.string().default(""),
   location: z.string(),
   portrait: z.string().default(""),
   currently: z.string().default(""),
