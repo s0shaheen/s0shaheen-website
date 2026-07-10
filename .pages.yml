@@ -15,6 +15,7 @@ content:
       - { name: name, label: Name, type: string }
       - { name: tagline, label: Tagline, type: string }
       - { name: location, label: Location, type: string }
+      - { name: portrait, label: "Portrait image (empty hides it)", type: image }
       - { name: currently, label: "Currently line (empty hides it)", type: string }
       - { name: interests, label: "Off hours / what I care about", type: text }
       - { name: substackFeed, label: "Substack feed URL (empty hides posts)", type: string }

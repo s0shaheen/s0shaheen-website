@@ -47,6 +47,7 @@ const siteSchema = z.object({
   name: z.string(),
   tagline: z.string(),
   location: z.string(),
+  portrait: z.string().default(""),
   currently: z.string().default(""),
   interests: z.string().default(""),
   substackFeed: z.union([z.literal(""), z.string().url()]).default(""),

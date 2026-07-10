@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mark } from "@/components/mark";
 import { ItemCard, ItemRow } from "@/components/items";
 import { getExperiences, getProjects, getSite, type Item } from "@/lib/content";
@@ -44,16 +45,28 @@ export default function Home() {
   return (
     <div className="pt-16 sm:pt-24">
       {/* About */}
-      <section className="fade-up max-w-[62ch]">
-        <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-          {site.name}
-        </h1>
-        <p className="mt-3 text-lg text-soft">{site.tagline}</p>
-        {site.currently && (
-          <p className="mt-5 flex items-baseline gap-2 font-medium text-[0.7rem] uppercase tracking-[0.08em] text-muted">
-            <Mark size={9} className="shrink-0 translate-y-px" />
-            currently: {site.currently} · {site.location}
-          </p>
+      <section className="fade-up flex items-start justify-between gap-6 sm:gap-10">
+        <div className="min-w-0 max-w-[62ch]">
+          <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+            {site.name}
+          </h1>
+          <p className="mt-3 text-lg text-soft">{site.tagline}</p>
+          {site.currently && (
+            <p className="mt-5 flex items-baseline gap-2 font-medium text-[0.7rem] uppercase tracking-[0.08em] text-muted">
+              <Mark size={9} className="shrink-0 translate-y-px" />
+              currently: {site.currently} · {site.location}
+            </p>
+          )}
+        </div>
+        {site.portrait && (
+          <Image
+            src={site.portrait}
+            alt="Ink-sketch portrait of Salman"
+            width={480}
+            height={459}
+            priority
+            className="h-auto w-[104px] shrink-0 sm:w-[136px]"
+          />
         )}
       </section>
 
