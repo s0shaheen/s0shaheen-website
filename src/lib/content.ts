@@ -20,6 +20,17 @@ const popupSchema = z.object({
   links: z.array(z.object({ label: z.string(), href: z.string() })).optional(),
 });
 
+// Pages CMS writes stub sub-objects for fields left empty (e.g. graphic:
+// {wide: false} with no kind/value). Treat incomplete stubs as absent so a
+// CMS round-trip can never fail the build.
+const asGraphic = (g: unknown) =>
+  g && typeof g === "object" && "kind" in g && "value" in g ? g : undefined;
+const asPopup = (p: unknown) =>
+  p && typeof p === "object" && Array.isArray((p as { body?: unknown }).body)
+    && ((p as { body: unknown[] }).body.length > 0)
+    ? p
+    : undefined;
+
 const itemBase = {
   slug: z.string().regex(/^[a-z0-9-]+$/, "slug must be kebab-case"),
   title: z.string(),
@@ -27,13 +38,13 @@ const itemBase = {
   years: z.string().optional(),
   oneLiner: z.string().optional(),
   featured: z.boolean().optional(),
-  graphic: graphicSchema.optional(),
-  popup: popupSchema.optional(),
+  graphic: z.preprocess(asGraphic, graphicSchema.optional()),
+  popup: z.preprocess(asPopup, popupSchema.optional()),
 };
 
 const experienceSchema = z.object({
   ...itemBase,
-  status: z.enum(["current", "previous"]),
+  status: z.enum(["current", "previous"]).default("previous"),
 });
 
 const projectSchema = z.object({
