@@ -55,12 +55,8 @@ export default function RootLayout({
     >
       <body className="min-h-dvh flex flex-col">
         <header className="mx-auto w-full max-w-[680px] px-6 pt-10 sm:pt-14">
-          <Link
-            href="/"
-            className="inline-flex items-baseline gap-2 font-serif text-lg font-semibold tracking-tight"
-          >
-            {site.name}
-            <Mark size={13} className="translate-y-px text-faint" />
+          <Link href="/" aria-label="Home" className="inline-flex">
+            <Mark size={18} />
           </Link>
         </header>
 

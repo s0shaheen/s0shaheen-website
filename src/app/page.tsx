@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="pt-16 sm:pt-24">
       {/* About */}
-      <section className="fade-up flex items-start justify-between gap-6 sm:gap-10">
+      <section className="fade-up flex items-center justify-between gap-6 sm:gap-10">
         <div className="min-w-0 max-w-[62ch]">
           <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
             {site.name}
@@ -65,7 +65,7 @@ export default function Home() {
             width={480}
             height={459}
             priority
-            className="h-auto w-[104px] shrink-0 sm:w-[136px]"
+            className="mr-1 h-auto w-[120px] shrink-0 sm:mr-6 sm:w-[160px]"
           />
         )}
       </section>
