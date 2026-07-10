@@ -41,15 +41,17 @@ const projectSchema = z.object({
   bucket: z.string(),
 });
 
+// Optional fields default rather than fail: Pages CMS omits empty fields when
+// it writes YAML, and a CMS round-trip must never break the build.
 const siteSchema = z.object({
   name: z.string(),
   tagline: z.string(),
   location: z.string(),
-  currently: z.string(),
-  interests: z.string(),
-  substackFeed: z.union([z.literal(""), z.string().url()]),
+  currently: z.string().default(""),
+  interests: z.string().default(""),
+  substackFeed: z.union([z.literal(""), z.string().url()]).default(""),
   handles: z.array(z.object({ label: z.string(), href: z.string() })),
-  reachOutIf: z.array(z.string()),
+  reachOutIf: z.array(z.string()).default([]),
 });
 
 const funSchema = z.object({
