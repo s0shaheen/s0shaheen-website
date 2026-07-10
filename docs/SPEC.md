@@ -11,7 +11,7 @@
 | D11 | Signature mark | **✱ heavy asterisk everywhere; ∗ thin/math asterisk as the light variant** (SVG in `src/components/mark.tsx`; also the favicon) |
 | D6b | Card system | **Approved:** square + wide (2-col span), identical border/radius/hover/↗/caption |
 
-## Interactive hero — "the asterisk as pivot" (concept locked 2026-07-10, execution in round 3)
+## Interactive hero — "the asterisk as pivot" (TABLED 2026-07-10 — Salman iterating on the animation separately; decisions below stay locked for when it resumes)
 
 Thunderbolts* → *The New Avengers. **The asterisk NEVER moves — it is the fixed pivot.** Normal state: "Hi, I'm Salman✱" (mark at the name's top-right). On hover/tap, the letters of "Salman" delete toward the mark, and a new phrase writes outward on its other side: "✱a builder", cycling through words; a media window opens in the vacated space. Cursor-leave reverses everything.
 

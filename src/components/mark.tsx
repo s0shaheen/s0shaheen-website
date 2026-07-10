@@ -1,8 +1,12 @@
 /**
- * The site mark: a heavy six-arm asterisk (✱), drawn once as an SVG so it
- * renders identically everywhere. `variant="light"` is the thin math-asterisk
- * (∗) counterpart for small/secondary uses (list markers, dividers).
+ * The site mark (locked in SPEC round 3): "sickle six" — six curved,
+ * razor-tipped blades. `variant="light"` is its companion "whirl five"
+ * (hard-capped curved strokes) for small/secondary uses.
  */
+const SICKLE_BLADE =
+  "M 49.17 45.07 Q 53.6 26.07 77.09 15.33 Q 63.86 32.91 50.83 45.07 Z";
+const WHIRL_ARM = "M 50 50 Q 74 29 50 8";
+
 export function Mark({
   size = 16,
   variant = "heavy",
@@ -12,29 +16,34 @@ export function Mark({
   variant?: "heavy" | "light";
   className?: string;
 }) {
-  const stroke = variant === "heavy" ? 17 : 7;
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 100 100"
-      fill="none"
       aria-hidden="true"
       className={className}
     >
-      {[0, 60, 120].map((deg) => (
-        <line
-          key={deg}
-          x1="50"
-          y1="9"
-          x2="50"
-          y2="91"
-          stroke="currentColor"
-          strokeWidth={stroke}
-          strokeLinecap="round"
-          transform={`rotate(${deg} 50 50)`}
-        />
-      ))}
+      {variant === "heavy"
+        ? [0, 60, 120, 180, 240, 300].map((deg) => (
+            <path
+              key={deg}
+              d={SICKLE_BLADE}
+              fill="currentColor"
+              transform={`rotate(${deg} 50 50)`}
+            />
+          ))
+        : [0, 72, 144, 216, 288].map((deg) => (
+            <path
+              key={deg}
+              d={WHIRL_ARM}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={12}
+              strokeLinecap="butt"
+              transform={`rotate(${deg} 50 50)`}
+            />
+          ))}
     </svg>
   );
 }

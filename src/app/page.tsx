@@ -48,14 +48,7 @@ export default function Home() {
       <section className="fade-up flex items-center gap-5 sm:gap-0">
         <div className="min-w-0 flex-1 sm:max-w-96 sm:flex-none">
           <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-            Hi, I&apos;m{" "}
-            <span className="relative inline-block">
-              Salman
-              <Mark
-                size={15}
-                className="absolute -right-4 -top-0.5 sm:-right-5 sm:-top-1"
-              />
-            </span>
+            {site.name}
           </h1>
           {site.tagline && (
             <p className="mt-3 text-lg text-soft">{site.tagline}</p>
