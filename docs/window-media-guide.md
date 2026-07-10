@@ -258,7 +258,17 @@ People as flowing silhouettes — a Shibuya-style crossing, a station concourse,
 
 ## Avoid
 
-See the avoid parameter — full anti-list provided there.
+Distilled from the per-theme risk notes + source taste-tiers:
+
+- **Corporate stock energy** — handshakes, glass-skyscraper sunsets, drone hero-swoops, city light-trail hyperlapses (peak "About page of a consultancy")
+- **Lifestyle-brand framing** — latte art, cozy mugs, styled desk flatlays, anything that could caption an Instagram café post
+- **Hacker/tech clichés** — Matrix rain, readable IDE screens, green terminals; code only works blurred into abstract light
+- **Glossy 3D chrome / crypto-landing-page renders** — the exact opposite of the site's print-flat language
+- **Symmetric kaleidoscope fluids** — turns ink (great) into lava lamp (screensaver)
+- **Golden-hour anything** — sunset clouds, warm lens flares; go overcast, cold, high-contrast instead
+- **Tropical drone water** — a grey Great Lake, not a Maldives reef
+- **Uniform mechanical spinning** — reads as a loading indicator, not a mark
+- **Anything with recognizable people, products, or brands** — abstract > literal, always
 
 ## Prep pipeline (loops, duotone grade, codecs, budgets)
 
