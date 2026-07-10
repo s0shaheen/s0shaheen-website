@@ -45,8 +45,8 @@ export default function Home() {
   return (
     <div className="pt-16 sm:pt-24">
       {/* About */}
-      <section className="fade-up flex items-center justify-between gap-6 sm:gap-10">
-        <div className="min-w-0 max-w-[62ch]">
+      <section className="fade-up flex items-center gap-5 sm:gap-0">
+        <div className="min-w-0 flex-1 sm:pr-8">
           <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
             {site.name}
           </h1>
@@ -65,9 +65,10 @@ export default function Home() {
             width={480}
             height={459}
             priority
-            className="mr-1 h-auto w-[120px] shrink-0 sm:mr-6 sm:w-[160px]"
+            className="h-auto w-[156px] shrink-0 sm:w-[208px]"
           />
         )}
+        <div aria-hidden className="hidden shrink-0 sm:block sm:w-[calc(50%-104px)]" />
       </section>
 
       {/* Experience */}
