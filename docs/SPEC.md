@@ -11,6 +11,12 @@
 | D11 | Signature mark | **✱ heavy asterisk everywhere; ∗ thin/math asterisk as the light variant** (SVG in `src/components/mark.tsx`; also the favicon) |
 | D6b | Card system | **Approved:** square + wide (2-col span), identical border/radius/hover/↗/caption |
 
+## Interactive hero — "the asterisk as pivot" (concept locked 2026-07-10, execution in round 3)
+
+Thunderbolts* → *The New Avengers. **The asterisk NEVER moves — it is the fixed pivot.** Normal state: "Hi, I'm Salman✱" (mark at the name's top-right). On hover/tap, the letters of "Salman" delete toward the mark, and a new phrase writes outward on its other side: "✱a builder", cycling through words; a media window opens in the vacated space. Cursor-leave reverses everything.
+
+Locked: window reveal = sliding panel + curtain split, duration slaved to the text animation; window content = looped duotone+accent video; color = only inside the window + the asterisk cycles hues while open; timing = springy; mobile = tap toggles; reduced-motion = fully disabled (static hero); layout = reserved slot (zero shift); close = on leave; word order = shuffled per visit. Words: a product manager · a builder · a lifelong learner · a technologist · an Illini · an analyst (article stored with each word). Mark = pinwheel-hard family (final pick round 3); name→word + cycle animation = fixed-pivot family (round 3). Stack: Motion for React + custom per-letter engine; video not GIF.
+
 Substack: profile exists (substack.com/@s0shaheen) but no publication yet → `/writing` and `/fun` are built but **unlinked from the nav**, and `substackFeed` stays `""` in `content/site.yml` until posts exist.
 
 ---
