@@ -43,12 +43,19 @@ export default function Home() {
   const buckets = [...new Set(projects.map((p) => p.bucket))];
 
   return (
-    <div className="pt-16 sm:pt-24">
+    <div className="pt-9 sm:pt-12">
       {/* About */}
       <section className="fade-up flex items-center gap-5 sm:gap-0">
         <div className="min-w-0 flex-1 sm:max-w-96 sm:flex-none">
           <h1 className="font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-            {site.name}
+            Hi, I&apos;m{" "}
+            <span className="relative inline-block">
+              Salman
+              <Mark
+                size={15}
+                className="absolute -right-4 -top-0.5 sm:-right-5 sm:-top-1"
+              />
+            </span>
           </h1>
           {site.tagline && (
             <p className="mt-3 text-lg text-soft">{site.tagline}</p>
@@ -75,7 +82,7 @@ export default function Home() {
       </section>
 
       {/* Experience */}
-      <section className="fade-up mt-16 space-y-10 sm:mt-20">
+      <section className="fade-up mt-9 space-y-10 sm:mt-11">
         <ItemGroup label="Currently" items={current} />
         <ItemGroup label="Previously" items={previous} />
       </section>
