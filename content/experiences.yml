@@ -28,20 +28,7 @@
     wide: false
 - slug: abbvie-swe-intern
   title: Software Engineer Intern
-  org: AbbVie
-  status: previous
-  featured: false
-  graphic:
-    wide: false
-- slug: stonex-swe-intern
-  title: Software Engineer Intern
-  org: StoneX
-  featured: false
-  graphic:
-    wide: false
-- slug: state-farm-swe-intern
-  title: Software Engineer Intern
-  org: State Farm
+  org: State Farm, StoneX Group, AbbVie
   status: previous
   featured: false
   graphic:
