@@ -103,27 +103,6 @@ export default function Home() {
         </section>
       )}
 
-      {/* Contact */}
-      <section className="fade-up mt-16 max-w-[62ch] sm:mt-20">
-        <SectionLabel>Contact</SectionLabel>
-        {site.reachOutIf.length > 0 && (
-          <ul className="mt-3 space-y-1.5 text-[0.95rem] text-soft">
-            {site.reachOutIf.map((line) => (
-              <li key={line} className="flex items-baseline gap-2.5">
-                <Mark size={8} variant="light" className="shrink-0 text-faint" />
-                {line}
-              </li>
-            ))}
-          </ul>
-        )}
-        <p className="mt-3 text-[0.95rem] text-soft">
-          The fastest way to reach me is{" "}
-          <a href="mailto:shaheensalmant@gmail.com" className="link-grow font-semibold text-ink">
-            email
-          </a>
-          . Everything else is in the footer.
-        </p>
-      </section>
     </div>
   );
 }

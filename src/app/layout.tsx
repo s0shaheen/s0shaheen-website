@@ -78,9 +78,8 @@ export default function RootLayout({
                 {h.label}
               </a>
             ))}
-            <span className="ml-auto inline-flex items-center gap-2 font-medium text-[0.65rem] uppercase tracking-[0.12em] text-faint">
-              <Mark size={9} variant="light" />
-              {new Date().getFullYear()}
+            <span className="ml-auto text-faint">
+              <Mark size={11} variant="light" />
             </span>
           </div>
         </footer>
